@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <script src="1.js"></script>
+    <style>
+        body {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/202402201216943.jpeg) no-repeat;
+            background-size: cover;
+            margin: 0, auto;
+            /*设置整个页面背景*/
+        }
+
+        span {
+            display: flex;
+            /*账号密码登录大盒子*/
+            flex-direction: column;
+            justify-content: space-around;
+            width: 20%;
+            height: 500px;
+            margin-left: 800px;
+            margin-top: 150px;
+        }
+
+        .student_id,
+        .student_password {
+            /*账号密码样式设置*/
+            height: 70px;
+            background-color: rgb(64, 121, 182);
+            border: 1px solid rgb(165, 211, 255);
+            border-radius: 20px;
+            font-size: 30px;
+            color: white;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        a {
+            /*取消链接自带属性*/
+            text-decoration: none;
+            color: white;
+            background-color: rgb(64, 121, 182);
+        }
+
+        .input {
+            /*设置输入账号密码框样式*/
+            width: 70%;
+            height: 50%;
+            border-radius: 10px;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        input[type="text"] {         /*修改输入框里字体大小*/
+            font-size: 25px;
+        }
+
+        .student_login {
+            /*设置登录样式*/
+            height: 70px;
+            background-color: rgb(64, 121, 182);
+            border: 1px solid rgb(165, 211, 255);
+            border-radius: 20px;
+            font-size: 45px;
+            color: white;
+            font-weight: bold;
+            line-height: 70px;
+            text-align: center;
+            transition: 1s;
+        }
+        .student_login:hover{
+            scale: 1.2;
+            box-shadow: 2px 2px 2px black;
+        }
+        .eye {
+            transform: scale(0.3);
+            margin-top: -87px;
+            margin-left: 235px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        <div class="student_id"> 账号:<input type="text" class="input"></div>
+        <div class="student_password"> 密码:<input type="password" class="input" style="width: 55%;margin-right: 30px;"
+                id="password">
+            <img src="https://18403581474.oss-cn-beijing.aliyuncs.com/img/202402201714032.png" alt="密码" class="eye">
+        </div>
+        <div class="student_login"><a href="学生信息界面.html">登录</a></div>
+
+    </span>
+</body>
+
+</html>
