@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录注册注销</title>
+    <style>
+        body {
+            background: url(https://18403581474.oss-cn-beijing.aliyuncs.com/img/202402201216943.jpeg) no-repeat;
+            background-size: cover;         /*设置整个页面背景*/
+            margin: 0, auto;
+        }
+
+        span {                                  /*登录注册注销大盒子*/
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 20%;
+            height: 500px;
+            margin-left: 800px;
+            margin-top: 150px;
+        }
+
+        .button_log,
+        .button_login,
+        .button_quit {                  /*三个按钮样式设置*/
+            font-weight: 500;
+            font-size: 35px;
+            height: 65px;
+            background-color: rgb(64, 121, 182);
+            cursor: pointer;
+            border: 1px solid rgb(165, 211, 255);
+            border-radius: 40px;
+            transition: 1.2s;
+        }
+
+        .button_log:hover,
+        .button_login:hover,
+        .button_quit:hover {            /*三个按钮鼠标变化样式*/
+            scale: 1.2;
+            box-shadow: 2px 2px 2px black;
+        }
+
+        a {                         /*取消链接自带属性*/
+            text-decoration: none;
+            color: white;
+            background-color: rgb(64, 121, 182);
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        <button class="button_login"><a href="login.html">登录</a></button>
+        <button class="button_log"><a href="log.html">注册</a></button>
+        <button class="button_quit"><a href="quit.html">注销</a></button>
+    </span>
+</body>
+
+</html>
