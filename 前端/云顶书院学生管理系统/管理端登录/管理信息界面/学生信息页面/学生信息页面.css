@@ -63,51 +63,43 @@ img {
     height: 100%;
 }
 
-.main {
+.main{
     width: 100%;
     height: 89%;
-    background-image: url("https://flowermooon.oss-cn-beijing.aliyuncs.com/%E8%83%8C%E6%99%AF.png");
-    background-size:100% ;
+    display: flex;justify-content: space-between;
 }
-
-.content{
-    display: flex;
-    justify-content: space-between;
-    height: 89%;
-}
-
-.date{
-    height: 11%;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.4);
-    text-align: center;
-    font-size: 200%;
-    vertical-align: middle;
-}
-
-.column{
-    width: 25%;
+.search{
+    width: 30%;
     height: 100%;
 }
-.number{
-    width: 100%;
-    height: 11%;
-    text-align: center;
-    font-size: 180%;
-    color: #dff1ff;
-    background-color: rgba(0, 90, 255, 0.3);
+
+.all{
+    width: 60%;
+    height: 100%;
+    border-left: dotted 2px rgb(92, 92, 166);
 }
-.box{
-    height: 89%;
-    width: 100%;
-    border-style: solid;
-    border-width: 2px;
-    border-bottom: 0;
-    border-right: 0;
-    border-color: #4d86b3;
-}
-.box>div{
+#search{
+    border-radius: 45px;
+    width: 80%;
+    margin-left: 10%;
+    border-color: rgb(25, 48, 92);
     text-align: center;
-    margin-bottom:2.5% ;
-    margin-top: 1.5%;
+    color: cornflowerblue;
+}
+.search p{
+    text-align: center;
+    margin-top: 50%;
+    color: rgb(12, 34, 76);
+}
+#submmit{
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 6%;
+    border-radius: 45px;
+    background-color: cornflowerblue;
+    color:white;
+    font-size: 100%;
+        height: 3%;
 }
