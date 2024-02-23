@@ -63,22 +63,25 @@ img {
     height: 100%;
 }
 
-.main{
+.main {
     width: 100%;
     height: 89%;
-    display: flex;justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
-.search{
+
+.search {
     width: 30%;
     height: 100%;
 }
 
-.all{
+.all {
     width: 60%;
     height: 100%;
     border-left: dotted 2px rgb(92, 92, 166);
 }
-#search{
+
+#search {
     border-radius: 45px;
     width: 80%;
     margin-left: 10%;
@@ -86,12 +89,14 @@ img {
     text-align: center;
     color: cornflowerblue;
 }
-.search p{
+
+.search p {
     text-align: center;
     margin-top: 50%;
     color: rgb(12, 34, 76);
 }
-#submmit{
+
+#submmit {
     width: 40%;
     text-align: center;
     margin: auto;
@@ -99,7 +104,18 @@ img {
     top: 6%;
     border-radius: 45px;
     background-color: cornflowerblue;
-    color:white;
+    color: white;
     font-size: 100%;
-        height: 3%;
+    height: 3%;
+    transition-duration: 0.3S;
+}
+
+#submmit:hover {
+    transform: scale(0.8);
+}
+.all>div{
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 1%;
+
 }

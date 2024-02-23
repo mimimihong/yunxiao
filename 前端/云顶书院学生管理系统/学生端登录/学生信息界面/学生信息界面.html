@@ -1,138 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>学生信息界面</title>
-</head>
-<style>
-   .head {                           /*顶部的大盒子*/
-        display: flex;
-        /* width: 1280px; */
-        height: 80px;
-        background: #3C7B9E;
-        justify-content: space-between;
+  </head>
+  <style>
+    .head {
+      /*顶部的大盒子*/
+      display: flex;
+      /* width: 1280px; */
+      height: 80px;
+      background: #3c7b9e;
+      justify-content: space-between;
     }
-    .left {                             /*左边图样*/
-        display: flex;
-        flex-direction: row;
-        height: 80px;
-        position: relative;
-        top: 12px;
-        left: 25px;
+    .left {
+      /*左边图样*/
+      display: flex;
+      flex-direction: row;
+      height: 80px;
+      position: relative;
+      top: 12px;
+      left: 25px;
     }
-    .right {                            /*右边图样*/
-        display: flex;
-        position: relative;
-        left: -20px;
-        flex-direction: row;
-        width: 180px;
-        background: #4D4F4E;
-        justify-content: space-around;
-        padding-top: 15px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #ffffff;
+    .right {
+      /*右边图样*/
+      display: flex;
+      position: relative;
+      left: -20px;
+      flex-direction: row;
+      width: 180px;
+      background: #4d4f4e;
+      justify-content: space-around;
+      padding-top: 15px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #ffffff;
     }
-    
-    .yun {                      /*云顶字样*/
-        position: relative;
-        font-family: Inter;
-        font-size: 35px;
-        font-weight: 400;
-        line-height: 42px;
-        letter-spacing: 0.09em;
-        text-align: left;
-        color:#FFFFFF;
-        left: 20px;
-        top: 5px;
+
+    .yun {
+      /*云顶字样*/
+      position: relative;
+      font-family: Inter;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 42px;
+      letter-spacing: 0.09em;
+      text-align: left;
+      color: #ffffff;
+      left: 20px;
+      top: 5px;
     }
-    .content {                      /*内容大盒子*/
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        padding-top: 20px;
-        margin-left: -150px;
+    .content {
+      /*内容大盒子*/
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding-top: 20px;
+      margin-left: -150px;
     }
-   
-    .image {                        /*小背景样式*/
-        position: relative;
-        width: 232px;
-        height: 232px;
-        top: 128px;
-        left: 76px;
-        border-radius: 25px;
-        box-shadow: 2px 2px 20px 2px #927474;
-        cursor: pointer;
-        
+
+    .image {
+      /*小背景样式*/
+      position: relative;
+      width: 232px;
+      height: 232px;
+      top: 128px;
+      left: 76px;
+      border-radius: 25px;
+      box-shadow: 2px 2px 20px 2px #927474;
+      cursor: pointer;
     }
-    .image img {                /*图片样式*/
-        position: relative;
-        top: 40px;
-        left: 68px;
-        cursor: pointer;
+    .image img {
+      /*图片样式*/
+      position: relative;
+      top: 40px;
+      left: 68px;
+      cursor: pointer;
     }
-    .font {                     /*图下的文字样式*/
-        position: relative;
-        top: 50px;
-        left: 82px;
-        font-family: Inter;
-        font-size: 35px;
-        font-weight: 400;
-        line-height: 42px;
-        letter-spacing: 0.09em;
-        text-align: left;
-        color: #ffffff;
-        cursor: pointer;
+    .font {
+      /*图下的文字样式*/
+      position: relative;
+      top: 50px;
+      left: 82px;
+      font-family: Inter;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 42px;
+      letter-spacing: 0.09em;
+      text-align: left;
+      color: #ffffff;
+      cursor: pointer;
     }
-    a{                              /*消除链接自带样式*/
-        text-decoration: none;
-         color: inherit;
+    a {
+      /*消除链接自带样式*/
+      text-decoration: none;
+      color: inherit;
     }
-</style>
-<body>
+  </style>
+  <body>
     <section>
-        <div class="head">
-            <div class="left">
-                <div >
-                    <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/Component%202.png">
-                </div>
-                <div class="yun">云顶书院</div>
-            </div>
-            <div class="right">
-                <div class="rightpeople">
-                    <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_yonghu%201.png">
-                </div>
-                <div class="rightdown">
-                    <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_shangjiantou%201.png">
-                </div>
-            </div>
-
+      <div class="head">
+        <div class="left">
+          <div>
+            <img
+              src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/Component%202.png"
+            />
+          </div>
+          <div class="yun">云顶书院</div>
         </div>
-        <div class="content">
-            <div class="image" style="background: #FB6D4E;">
-                <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_wenjian2%201.png">
-                <div class="font" style="left: 45px;"><a href="">学生信息</a></div>
-            </div>
-            <div class="image" style="background: #FAA541;">
-                <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_xinxi1%201.png">
-                <div class="font"><a href="">公告</a></div>
-            </div>
-            <div class="image" style="background: #FAC641;">
-                <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_yuedu%201.png">
-                <div class="font"><a href="">研学</a></div>
-            </div>
-            <div class="image" style="background: #2D9D05;">
-                <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_fenlei%201.png">
-                <div class="font" style="left: 45px;"><a href="#">学习资料</a></div>
-            </div>
-            <div class="image" style="background: #076EA9;">
-                <img
-                    src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/%E7%BA%BF%E6%80%A7-_%E7%88%B1%E5%BF%83%201.png">
-                <div class="font"><a href="">收藏</a></div>
-            </div>
+        <div class="right">
+          <div class="rightpeople">
+            <img
+              src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_yonghu%201.png"
+            />
+          </div>
+          <div class="rightdown">
+            <img
+              src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_shangjiantou%201.png"
+            />
+          </div>
         </div>
+      </div>
+      <div class="content">
+        <div class="image" style="background: #fb6d4e">
+          <img
+            src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_wenjian2%201.png"
+          />
+          <div class="font" style="left: 45px"><a href="">学生信息</a></div>
+        </div>
+        <div class="image" style="background: #faa541">
+          <img
+            src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_xinxi1%201.png"
+          />
+          <div class="font"><a href="">公告</a></div>
+        </div>
+        <div class="image" style="background: #fac641">
+          <img
+            src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_yuedu%201.png"
+          />
+          <div class="font"><a href="">研学</a></div>
+        </div>
+        <div class="image" style="background: #2d9d05">
+          <img
+            src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_fenlei%201.png"
+          />
+          <div class="font" style="left: 45px"><a href="#">学习资料</a></div>
+        </div>
+        <div class="image" style="background: #076ea9">
+          <img
+            src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/%E7%BA%BF%E6%80%A7-_%E7%88%B1%E5%BF%83%201.png"
+          />
+          <div class="font"><a href="">收藏</a></div>
+        </div>
+      </div>
     </section>
-</body>
-
+  </body>
 </html>
