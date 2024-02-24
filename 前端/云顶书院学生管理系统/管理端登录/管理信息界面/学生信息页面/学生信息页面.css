@@ -113,9 +113,24 @@ img {
 #submmit:hover {
     transform: scale(0.8);
 }
-.all>div{
+
+.all>div {
     text-align: center;
     font-size: 150%;
     margin-bottom: 1%;
+    display: flex;
+    justify-content: center;
+}
 
+.all button {
+    background-color: #3c7b9e;
+    color: whitesmoke;
+    border-radius: 45px;
+    border-width: 0;
+    margin-left: 5%;
+    transition-duration: 0.3S;
+}
+
+.all button:hover {
+    transform: scale(0.8);
 }

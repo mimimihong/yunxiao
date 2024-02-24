@@ -5,8 +5,17 @@ var all = document.getElementsByClassName("all");
 let i = 0;
 for (i = 0; i < data.length; i++) {
     var div = document.createElement("div");
-    div.innerHTML = "姓名:" + data[i].name + "&nbsp&nbsp&nbsp&nbsp学号:" + data[i].stuId + "&nbsp&nbsp&nbsp&nbsp方向:" + data[i].direction + "&nbsp&nbsp&nbsp&nbsp期数:" + data[i].period;
     all[0].appendChild(div);
+    var text = document.createElement("div");
+    div.appendChild(text);
+    var detail = document.createElement("button");
+    div.appendChild(detail);
+    detail.innerHTML = "详细信息";
+    detail.onclick = function () {
+        location.href = "../管理信息界面.html";//之后换成学生信息页面..
+    }
+    text.innerHTML = "姓名:" + data[i].name + "&nbsp&nbsp&nbsp&nbsp学号:" + data[i].stuId + "&nbsp&nbsp&nbsp&nbsp方向:" + data[i].direction + "&nbsp&nbsp&nbsp&nbsp期数:" + data[i].period;
+    
 }
 
 var submmit = document.getElementById("submmit");
