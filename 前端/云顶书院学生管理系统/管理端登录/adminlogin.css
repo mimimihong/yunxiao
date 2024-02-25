@@ -87,7 +87,7 @@ input[type="text"] {         /*修改输入框里字体大小*/
     
 }
 .login{             /*点登录出来的账号密码登录盒子界面*/
-    display: none;
+    display: flex;
     position: fixed;
     left: 0;
     top: 0;

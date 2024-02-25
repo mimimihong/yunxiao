@@ -10,9 +10,9 @@ for (i = 0; i < data.length; i++) {
     div.appendChild(text);
     var detail = document.createElement("button");
     div.appendChild(detail);
-    detail.innerHTML = "详细信息";
+    detail.innerHTML = "注销";
     detail.onclick = function () {
-        location.href = "../../../学生端登录/学生信息界面/学生信息/基本信息.html";//之后换成学生信息页面..
+                                                //从数据库删除学生信息函数
     }
     text.innerHTML = "姓名:" + data[i].name + "&nbsp&nbsp&nbsp&nbsp学号:" + data[i].stuId + "&nbsp&nbsp&nbsp&nbsp方向:" + data[i].direction + "&nbsp&nbsp&nbsp&nbsp期数:" + data[i].period;
 
@@ -33,10 +33,9 @@ submmit.onclick = function () {
             div.appendChild(text);
             var detail = document.createElement("button");
             div.appendChild(detail);
-            detail.innerHTML = "详细信息";
+            detail.innerHTML = "注销";
             detail.onclick = function () {
-                location.href = "../../../学生端登录/学生信息界面/学生信息/基本信息.html";
-                
+                                                //从数据库删除学生信息函数
             }
             text.innerHTML = "姓名:" + data[i].name + "&nbsp&nbsp&nbsp&nbsp学号:" + data[i].stuId + "&nbsp&nbsp&nbsp&nbsp方向:" + data[i].direction + "&nbsp&nbsp&nbsp&nbsp期数:" + data[i].period;
             i = data.length;
