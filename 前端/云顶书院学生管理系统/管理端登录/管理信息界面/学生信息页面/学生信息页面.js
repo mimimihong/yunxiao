@@ -1,6 +1,11 @@
 data = [
     { name: "张三", stuId: "12345678", direction: "全栈", period: "八期" }, { name: "李四", stuId: "56789101", direction: "全栈", period: "八期" }, { name: "王五", stuId: "87654321", direction: "全栈", period: "八期" }
 ]
+const res = axios.get("")
+    .then(function (response) {
+        data = response.data;
+    })
+
 var all = document.getElementsByClassName("all");
 let i = 0;
 for (i = 0; i < data.length; i++) {

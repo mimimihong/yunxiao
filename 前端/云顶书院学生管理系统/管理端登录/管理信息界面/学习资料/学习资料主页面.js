@@ -2,6 +2,11 @@ data = [{
     title: "python学习资料", img: "https://flowermooon.oss-cn-beijing.aliyuncs.com/OI.jpg"
 }, { title: "java学习资料", img: "https://flowermooon.oss-cn-beijing.aliyuncs.com/OIP-C.jpg" }, { title: "ps学习资料", img: "https://flowermooon.oss-cn-beijing.aliyuncs.com/OIP-C%20(3).jpg" }, { title: "js学习资料", img: "https://flowermooon.oss-cn-beijing.aliyuncs.com/OIP-C%20(2).jpg" }, { title: "c++学习资料", img: "https://flowermooon.oss-cn-beijing.aliyuncs.com/OIP-C%20(1).jpg" }, { title: "c语言学习资料", img: "https://flowermooon.oss-cn-beijing.aliyuncs.com/download.jpg" }]
 //临时使用
+const res = axios.get("")
+    .then(function (response) {
+        data = response.data;
+    })
+    
 var img = document.getElementsByClassName("img");
 var resources = document.getElementsByClassName("resources");
 var left = document.getElementsByClassName("left");

@@ -5,6 +5,10 @@ data = [
     [{ name: "张三", direction: "全栈", class: "软件2325" }, { name: "张三", direction: "全栈", class: "软件2325" }, { name: "张三", direction: "全栈", class: "软件2325" }, { name: "张三", direction: "全栈", class: "软件2325" }, { name: "张三", direction: "全栈", class: "软件2325" }]
 ];
 
+const res = axios.get("")
+    .then(function (response) {
+        data = response.data;
+    })
 
 var date = document.getElementsByClassName("date");
 var now = new Date();
