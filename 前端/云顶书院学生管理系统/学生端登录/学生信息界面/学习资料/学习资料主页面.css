@@ -1,0 +1,152 @@
+html {
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    width: 100%;
+    height: 11%;
+    background-color: #3c7b9e;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    width: 10%;
+    background-color: transparent;
+    border-width: 0;
+    transition-duration: 0.3S;
+}
+.back>img{
+    width: 55%;
+    height: 80%;
+}
+.back:hover {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.logo {
+    width: 26%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoImg {
+    width: 43%;
+    height: 90%;
+}
+
+.logo>a {
+    width: 57%;
+    height: 80%;
+    margin-top: 3%;
+    font-size: 225%;
+    color: #f3ffff;
+    vertical-align: bottom;
+}
+
+.main {
+    width: 100%;
+    height: 89%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    width: 86%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.left {
+    width: 7%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3S;
+    margin-right: 6%;
+}
+
+.left:hover {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.right {
+    width: 7%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3S;
+    margin-left: 6%;
+}
+
+.right:hover {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.column {
+    height: 85%;
+    width: 25%;
+    margin-top: 3.5%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+.resources {
+    height: 40%;
+    width: 100%;
+}
+
+
+.resources>p {
+    height: 29%;
+    transition-duration: 0.3S;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5%;
+    
+}
+.resources>p:hover {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+.resources>.img {
+    background-color: cadetblue;
+    height: 70%;
+    border-radius: 5%;
+    transition-duration: 0.3S;
+}
+.resources>.img>img{
+    border-radius: 5%;
+}
+.resources>.img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    height: 13%;
+}
