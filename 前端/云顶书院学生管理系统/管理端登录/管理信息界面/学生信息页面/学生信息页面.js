@@ -5,7 +5,6 @@ const res = axios.get("")
     .then(function (response) {
         data = response.data;
     })
-
 var all = document.getElementsByClassName("all");
 let i = 0;
 for (i = 0; i < data.length; i++) {

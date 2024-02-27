@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>修改密码</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <style>
     * {
@@ -199,6 +200,19 @@
             console.log(new2);
         }
     }
+        //请求
+        function users() {
+                let user = new XMLHttpRequest();
+                user.open('get', '');
+                user.send();
+                user.onreadystatechange = function () {
+                    if (user.readyState === 4 && user.status === 200) {
+                        var message = document.getElementById("message");
+                        let check = JSON.parse(user.responseText);
+                        console.log(check);
+                    }
 
+                }
+            }
 </script>
 </html>

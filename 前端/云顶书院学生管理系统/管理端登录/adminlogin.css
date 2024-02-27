@@ -28,8 +28,8 @@ body {
 
     
 
-.student_id,
-.student_password {
+.admin_id,
+.admin_password {
     /*账号密码样式设置*/
     height: 70px;
     background-color: rgb(64, 121, 182);
@@ -62,7 +62,7 @@ input[type="text"] {         /*修改输入框里字体大小*/
     font-size: 15px;
 }
 
-.student_login {
+.admin_login {
     /*设置登录样式*/
     height: 70px;
     background-color: rgb(64, 121, 182);
@@ -75,7 +75,7 @@ input[type="text"] {         /*修改输入框里字体大小*/
     text-align: center;
     transition: 1s;
 }
-.student_login:hover{           /*登录鼠标样式*/
+.admin_login:hover{           /*登录鼠标样式*/
     scale: 1.2;
     box-shadow: 2px 2px 2px black;
 }

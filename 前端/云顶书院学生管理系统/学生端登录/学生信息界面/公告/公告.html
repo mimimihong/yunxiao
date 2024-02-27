@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>公告</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <style>
     .text {
@@ -145,6 +146,13 @@
         back[0].onclick = function () {
             location.href = "../学生信息界面.html";
         }
+        // 从后端获取数据并在页面上显示
+	axios.get(" ")
+		.then(response => {
+			var content = response.data.content;
+			document.getElementById("content").innerText = content;
+		})
+		.catch(error => console.error(error));
     </script>
 </body>
 

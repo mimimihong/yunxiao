@@ -12,7 +12,7 @@ for (i = 0; i < data.length; i++) {
     div.appendChild(detail);
     detail.innerHTML = "注销";
     detail.onclick = function () {
-                                                //从数据库删除学生信息函数
+        //从数据库删除学生信息函数
     }
     text.innerHTML = "姓名:" + data[i].name + "&nbsp&nbsp&nbsp&nbsp学号:" + data[i].stuId + "&nbsp&nbsp&nbsp&nbsp方向:" + data[i].direction + "&nbsp&nbsp&nbsp&nbsp期数:" + data[i].period;
 
@@ -34,8 +34,27 @@ submmit.onclick = function () {
             var detail = document.createElement("button");
             div.appendChild(detail);
             detail.innerHTML = "注销";
-            detail.onclick = function () {
-                                                //从数据库删除学生信息函数
+            detail.onclick = function deleteStudent() {            /*注销*/
+                /* window.onload = function() {             
+                     axios.get(`/students/${studentId}`)
+                       .then(response => {
+                         const student = response.data;
+                         document.getElementById('name').textContent = student.name;
+                         document.getElementById('age').textContent = student.age;
+                         document.getElementById('gender').textContent = student.gender;
+                       })
+                       .catch(error => console.error('Error:', error));
+                   };*/
+                   axios.delete(`/api/students/${studentId}`)
+                    .then(response => {
+                        if (response.status === 200) {
+                            alert('Student deleted successfully');
+                            window.location.reload(); // 刷新页面以更新学生列表
+                        } else {
+                            alert('Error deleting student');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
             }
             text.innerHTML = "姓名:" + data[i].name + "&nbsp&nbsp&nbsp&nbsp学号:" + data[i].stuId + "&nbsp&nbsp&nbsp&nbsp方向:" + data[i].direction + "&nbsp&nbsp&nbsp&nbsp期数:" + data[i].period;
             i = data.length;
