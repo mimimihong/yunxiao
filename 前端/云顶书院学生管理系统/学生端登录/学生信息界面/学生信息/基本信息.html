@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>基本信息</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <style>
     * {
@@ -96,6 +97,11 @@
         background: #F8F5F5;
         justify-content: space-around;
     }
+    .pic{
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+    }
     .massage1{
         position: relative;
         width: 330px;
@@ -109,15 +115,6 @@
         left: -300px;
     }
     a {text-decoration: none;}
-    .picture{
-        width: 200px;
-        height: 300px;
-        scale: 0.15;
-        flex: 1;
-        position: relative;
-        left: -170px;
-        top: -70px;
-    }
 </style>
 <body>
     <section>
@@ -130,7 +127,7 @@
             </div>
             <div class="right">
                 <div class="people">
-                    <a href="../学生信息界面.html"><img
+                    <a href="学生信息界面.html"><img
                             src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_zuojiantou2-17%202.png"></a>
         
                 </div>
@@ -142,6 +139,12 @@
                     <div class="group" style="background: white;border: 2px solid #D9D9D9" onclick="group()">
                         <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/Rectangle%2028.png">基本信息
                     </div>
+                <!-- </a>
+                <a href="详细信息.html">
+                    <div class="group" onclick="group()">
+                        <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_caidan2%201.png">详细信息
+                    </div>
+                </a> -->
                 <a href="修改信息.html">
                     <div class="group" onclick="group()">
                         <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_bianji1%201.png">修改信息
@@ -156,9 +159,7 @@
             <hr style="color: #CCC6C6;">
         </div>
         <div id="third">
-            <div class="picture">
-                <img src="https://18403581474.oss-cn-beijing.aliyuncs.com/img/202402231059171.png" alt="">
-            </div>
+            <!-- <div class="pic"><input type="file" class="pic1"></div> -->
             <div class="massage1">
                 学号/账号:<input type="text"><br>
                 密码:<input type="text"><br>
@@ -196,7 +197,20 @@
             }
 
         }
-    
+        //请求
+        function users() {
+                let user = new XMLHttpRequest();
+                user.open('get', '');
+                user.send();
+                user.onreadystatechange = function () {
+                    if (user.readyState === 4 && user.status === 200) {
+                        var message = document.getElementById("message");
+                        let check = JSON.parse(user.responseText);
+                        console.log(check);
+                    }
+
+                }
+            }
 
 </script>
 </html>
