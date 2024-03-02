@@ -1,37 +1,43 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden!important;
+    overflow-y: auto!important;
+}
 *{
     margin:0 auto;
     padding:0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .box {
-    width: 1280px;
-    height: 1567px;
+    width: 1520px;
     background-color: #F8F5F5;
 }
 .yunding {
-    width: 1280px;
-    height: 80px;
+    width: 1520px;
+    height: 100px;
     background-color: #3C7B9E;
 }
 .logo {
-    width: 84px;
-    height: 47px;
+    width: 130px;
+    height: 70px;
     margin-left: 40px;
     margin-top: 15px;
 } 
 .text1 {
     background-color: #3C7B9E;
-    width: 150px;
+    width: 350px;
     height: 42px;
-    font: 400 35px "微软雅黑";
+    font: 400 52px "微软雅黑";
     color: #FFFFFF;
-    margin-left: 140px;
-    margin-top: -45px;
+    margin-left: 180px;
+    margin-top: -70px;
 }
 #return {
     float: left;
-    width: 55px;
-    height: 55px;
-    margin-left: 1200px;
+    width: 80px;
+    height: 80px;
+    margin-left: 1400px;
     margin-top: -50px;
     background: url(xianxing-_zuojiantou2-17.png);
 } 
@@ -210,7 +216,7 @@
     font: 600 35px "微软雅黑";
     width: 1118px;
     height: 80px;
-    margin-left: -20px;
+    margin-left: -50px;
 }
 .offset_text {
     float: left;

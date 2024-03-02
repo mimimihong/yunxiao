@@ -22,6 +22,7 @@ var seat = document.getElementById('seat');
 function goseat() {
     window.location.href="座位预约.html";
 }
+
 function show_change() {
     const xha=new XMLHttpRequest();
     xha.open("GET","  ");    //将调整的研学数据展示
@@ -34,6 +35,8 @@ function show_change() {
             }
         }
     }
+// var img = document.getElementById("img");
+// img.src = data;
 }
 function show_leave() {
     const xha=new XMLHttpRequest();
