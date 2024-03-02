@@ -5,37 +5,28 @@ eye.addEventListener('click', function () {         /*密码眼睛设置*/
     password.type = (password.type === 'password') ? 'text' : 'password';
 })
 //登陆验证
-// const res = axios.get(" ")
-//     .then(function (response) {
-//         data = response.data;
-//     })
-//让输入的数据和数据库里的比较
-let inputEmail = document.querySelector('admin_id').value;
-let inputPassword = document.querySelector('admin_password').value;
+const res = axios.get(" ")
+    .then(function (response) {
+        data = response.data;
+    })
+                        //让输入的数据和数据库里的比较
 document.querySelector('admin_login').addEventListener('click',
     function () {
-        axios({
-            url: ''
-        params: {
-                //后端
-            }
-        data: {
-                admin_id,
-                admin_password
-            }.then((result) => {
-                后端.map(student => {
-                    if (student === inputEmail) {
-                        后端.map(password => {
-                            if (password === inputPassword) {
-                                window.location.href = '学生。。。'
-                            }
-                        })
-                       }
-                    else {
-                        alert('账号或密码错误');
-                    }
-                })
-            }).catch(alert('404 NOT FOUNT'))
+        let inputEmail = document.querySelector('admin_id').value;
+        let inputPassword = document.querySelector('admin_password').value;
 
-        })
-    }); 
+        for (let i = 0; i < data.length; i++) {
+            let inf = data[i];
+            if (reg.test(inputEmail)) {
+                if (inf.email === inputEmail && inf.password === inputPassword) {
+                    
+                }
+                else {
+                    document.getElementById('result').textContent = '账号或密码错误';
+                }
+
+            }
+
+        }
+
+    });  

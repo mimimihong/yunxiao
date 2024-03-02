@@ -14,17 +14,7 @@ function submitContent() {
     var content = document.getElementById("content").value;
 
     // 发送数据到后端
-    axios({
-        url: ''
-            method: 'post'
-            data{
-        后端。。=title
-        =content
-    }
-        }).then((result) => {
-        后.。。=data
-        alert('发布成功')
-    }).catch(
-        alert('404 NOT FOUNT')
-    )
+    axios.post(" ", { content: content })
+        .then(response => console.log(response))
+        .catch(error => console.error(error));
 }

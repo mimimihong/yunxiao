@@ -5,7 +5,7 @@ back[0].onclick = function () {
 function registerStudent() {
     const student_id = document.querySelector('.student_id').value;
 
-  /*  data = [
+    data = [
         { name: "张三", stuId: "12345678", direction: "全栈", period: "八期" }, { name: "李四", stuId: "56789101", direction: "全栈", period: "八期" }, { name: "王五", stuId: "87654321", direction: "全栈", period: "八期" }
     ]
 
@@ -18,18 +18,5 @@ function registerStudent() {
           alert('Error registering student');
         }
       })
-      .catch(error => console.error('Error:', error));*/
-      axios({
-        url:''
-        method: 'post'
-        data:{
-          student_id
-        }
-        
-      }).then((result) => {
-        后.。。=data
-        alert('注册成功')
-    }).catch(
-        alert('404 NOT FOUNT')
-    )
+      .catch(error => console.error('Error:', error));
   }

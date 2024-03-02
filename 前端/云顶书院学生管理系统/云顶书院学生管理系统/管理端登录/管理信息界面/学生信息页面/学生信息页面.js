@@ -5,13 +5,7 @@ const res = axios.get("")
     .then(function (response) {
         data = response.data;
     })
-    let student =document.querySelector('.student')
-// var all = document.getElementsByClassName("all");          /*换josn类型用map遍历*/
-//  datastr =data后端.map(datastr =>{
-//     return ` <li class="student">姓名: + ${datastr.} + &nbsp&nbsp&nbsp&nbsp学号: + ${datastr.} + &nbsp&nbsp&nbsp&nbsp方向: + ${datastr.} + &nbsp&nbsp&nbsp&nbsp期数: + ${datastr.}</li>`
-//  }).join('')
-//  all.innerHTML =datastr
- 
+var all = document.getElementsByClassName("all");
 let i = 0;
 for (i = 0; i < data.length; i++) {
     var div = document.createElement("div");
@@ -22,7 +16,6 @@ for (i = 0; i < data.length; i++) {
     div.appendChild(detail);
     detail.innerHTML = "详细信息";
     detail.onclick = function () {
-        localStorage.setItem("key", data[i].stuId);
         location.href = "../../../学生端登录/学生信息界面/学生信息/基本信息.html";//之后换成学生信息页面..
     }
     text.innerHTML = "姓名:" + data[i].name + "&nbsp&nbsp&nbsp&nbsp学号:" + data[i].stuId + "&nbsp&nbsp&nbsp&nbsp方向:" + data[i].direction + "&nbsp&nbsp&nbsp&nbsp期数:" + data[i].period;

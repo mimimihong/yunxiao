@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fvauth.fvauthapp.mapper.SysStudentMapper">
+
+    <resultMap id="sysStudentResultMap" type="com.fvauth.fvauthapp.domain.SysStudent">
+        <id property="id" column="id"/>
+        <result property="nickName" column="nick_name"/>
+        <result property="userName" column="user_name"/>
+        <result property="passWord" column="pass_word"/>
+        <result property="studentNo" column="student_no"/>
+        <result property="sex" column="sex"/>
+        <result property="academyDes" column="academy_des"/>
+        <result property="duringTime" column="during_time"/>
+        <result property="direction" column="direction"/>
+        <result property="awardInfo" column="award_info"/>
+        <result property="identityStatus" column="identity_status"/>
+    </resultMap>
+
+    <!-- 插入学生信息 -->
+    <insert id="insertSysStudent" parameterType="com.fvauth.fvauthapp.domain.SysStudent">
+        INSERT INTO sys_student (nick_name, user_name, pass_word, student_no, sex, academy_des, during_time, direction, award_info, identity_status)
+        VALUES (#{nickName}, #{userName}, #{passWord}, #{studentNo}, #{sex}, #{academyDes}, #{duringTime}, #{direction}, #{awardInfo}, #{identityStatus})
+    </insert>
+
+    <!-- 根据ID删除学生信息 -->
+    <delete id="deleteSysStudentById" parameterType="java.lang.Long">
+        DELETE FROM sys_student WHERE id = #{id}
+    </delete>
+
+    <!-- 更新学生信息 -->
+    <update id="updateSysStudent" parameterType="com.fvauth.fvauthapp.domain.SysStudent">
+        UPDATE sys_student
+        SET nick_name = #{nickName}, user_name = #{userName}, pass_word = #{passWord}, student_no = #{studentNo},
+            sex = #{sex}, academy_des = #{academyDes}, during_time = #{duringTime}, direction = #{direction},
+            award_info = #{awardInfo}, identity_status = #{identityStatus}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 根据ID查询学生信息 -->
+    <select id="selectSysStudentById" parameterType="java.lang.Long" resultMap="sysStudentResultMap">
+        SELECT * FROM sys_student WHERE id = #{id}
+    </select>
+
+    <!--根据用户名查询学生信息-->
+    <select id="queryStuName" parameterType="java.lang.String" resultMap="sysStudentResultMap">
+        SELECT * FROM sys_student WHERE user_name = #{userName}
+    </select>
+    <!-- 根据学号查询学生信息-->
+    <select id="queryStuNo" parameterType="java.lang.String" resultMap="sysStudentResultMap">
+        SELECT * FROM sys_student WHERE student_no = #{studentNo}
+    </select>
+
+    <!-- 查询所有学生信息 -->
+    <select id="selectAllSysStudents" resultMap="sysStudentResultMap">
+        SELECT * FROM sys_student
+    </select>
+
+</mapper>
