@@ -1,6 +1,6 @@
 data = "https://flowermooon.oss-cn-beijing.aliyuncs.com/%E7%A0%94%E5%AD%A6%E5%AE%89%E6%8E%92.png";
 
-const res = axios.get("")
+const res = axios.get(`${data}`)
     .then(function (response) {
         data = response.data;
     })

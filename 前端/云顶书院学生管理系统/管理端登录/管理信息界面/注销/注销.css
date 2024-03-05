@@ -11,7 +11,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .top {
     width: 100%;
     height: 11%;
@@ -74,29 +73,38 @@ img {
     width: 30%;
     height: 100%;
 }
-
+th{
+    font-size: 30px;
+    padding: 50px;
+}
 .all {
-    width: 60%;
     height: 100%;
     border-left: dotted 2px rgb(92, 92, 166);
 }
-
+span{
+    margin: 0;
+    padding: 0;
+}
 #search {
     border-radius: 45px;
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
     border-color: rgb(25, 48, 92);
     text-align: center;
     color: cornflowerblue;
+    height: 40px;
 }
-
+input[type="search"]{
+    /*修改输入框里字体大小*/
+    font-size: 25px;
+}
 .search p {
     text-align: center;
     margin-top: 50%;
     color: rgb(12, 34, 76);
+    font-size: 35px;
 }
 
-#submmit {
+#submit {
     width: 40%;
     text-align: center;
     margin: auto;
@@ -110,16 +118,15 @@ img {
     transition-duration: 0.3S;
 }
 
-#submmit:hover {
+#submit:hover {
     transform: scale(0.8);
+    cursor: pointer;
 }
 
-.all>div {
-    text-align: center;
+li {
     font-size: 150%;
-    margin-bottom: 1%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .all button {
@@ -127,10 +134,11 @@ img {
     color: whitesmoke;
     border-radius: 45px;
     border-width: 0;
-    margin-left: 5%;
+    font-size: 20px;
     transition-duration: 0.3S;
 }
 
 .all button:hover {
     transform: scale(0.8);
+    cursor: pointer;
 }

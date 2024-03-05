@@ -134,26 +134,14 @@
             </button>
         </div>
         <div class="text">
-            <div class="title"><input type="text" value="标题"></div><br>
+            <div class="title"><input type="text" value="云顶公告" readonly></div><br>
             <hr>
             <div class="content">
-                <textarea name="content" id="content" cols="227" rows="35"></textarea>
+                <textarea name="content" id="content" cols="227" rows="35" ></textarea>
             </div>
         </div>
     </section>
-    <script>
-        var back = document.getElementsByClassName("back");
-        back[0].onclick = function () {
-            location.href = "../学生信息界面.html";
-        }
-        // 从后端获取数据并在页面上显示
-	axios.get(" ")
-		.then(response => {
-			var content = response.data.content;
-			document.getElementById("content").innerText = content;
-		})
-		.catch(error => console.log(error));
-    </script>
+    <script src="公告.js"></script>
 </body>
 
 </html>

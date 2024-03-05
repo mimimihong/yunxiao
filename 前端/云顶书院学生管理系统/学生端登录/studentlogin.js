@@ -1,40 +1,25 @@
- 
-    let eye = document.querySelector('.eye');
-    eye.addEventListener('click', function () {         /*密码眼睛设置*/
-        let password = document.getElementById("password");
-        password.type = (password.type === 'password') ? 'text' : 'password';
+document.querySelector('.student_login').addEventListener('click', function () {
+    let inputEmail = document.querySelector('.student_id input').value;
+    let inputPassword = document.querySelector('.student_password input').value;
+
+    // 发送登录请求
+    axios.post("https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/loginPass", {
+        userName: inputEmail,
+        passWord: inputPassword
     })
-    //登陆验证
-    const res = axios.get(" ")
     .then(function (response) {
-        data = response.data;
-    }) 
-    let inputEmail = document.querySelector('student_id').value;
-    let inputPassword = document.querySelector('student_password').value;
-    document.querySelector('student_login').addEventListener('click',
-        function () {
-            axios({
-                url: ''
-            params: {
-                    //后端
-                }
-            data: {
-                    admin_id,
-                    admin_password
-                }.then((result) => {
-                    后端.map(student => {
-                        if (student === inputEmail) {
-                            后端.map(password => {
-                                if (password === inputPassword) {
-                                    window.location.href = '学生。。。'
-                                }
-                            })
-                           }
-                        else {
-                            alert('账号或密码错误');
-                        }
-                    })
-                }).catch(alert('404 NOT FOUNT'))
-    
-            })
-        }); 
+        // 处理登录成功的逻辑，根据服务器返回的结果进行跳转等操作
+        const data = response.data;
+        console.log(data);
+        if(data.code === 200) {
+            window.location.href = './学生信息界面/学生信息界面.html';
+        } else {
+            alert(data.message); // 在页面上显示登录失败的信息
+        }
+    })
+    .catch(function (error) {
+        // 处理登录失败的逻辑，比如网络错误等
+        console.error(error);
+        alert("登录失败，请稍后重试！");
+    });
+});
