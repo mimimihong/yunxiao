@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本信息</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    section {
+        width: 100%;
+        height: 830px;
+        background: #F8F5F5;
+
+    }
+
+    /* 顶部蓝条 */
+    .first {
+        display: flex;
+        /* width: 1640px; */
+        height: 80px;
+        background: #3C7B9E;
+        justify-content: space-between;
+    }
+
+    /*蓝条左边*/
+    .left {
+        display: flex;
+        flex-direction: row;
+        /* width: 1280px; */
+        height: 80px;
+        position: relative;
+        top: 12px;
+        left: 25px;
+        /* justify-content: space-around; */
+    }
+
+    .yun {
+        position: relative;
+        font-family: Inter;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 42px;
+        letter-spacing: 0.09em;
+        text-align: left;
+        color: #FFFFFF;
+        left: 20px;
+        top: 5px;
+    }
+
+    /*蓝条右边*/
+    .right {
+        position: relative;
+        right: 50px;
+        top: 13px;
+    }
+
+    /*四个选择*/
+    #sec {
+        /* width: 1400px; */
+        width: 80%;
+        background: #F8F5F5;
+        margin: auto;
+    }
+
+    .second {
+        display: flex;
+        height: 100px;
+        background: #F8F5F5;
+    }
+
+    .second div {
+        width: 180px;
+        height: 53px;
+        font-family: Inter;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 53px;
+        letter-spacing: 0.18em;
+        color: #3f3c3c4d;
+        border: 1px solid #D9D9D9;
+        text-align: center;
+        position: relative;
+        top: 46px;
+        left: 10%;
+        background: #F4F0F0;
+    }
+
+    .second img {
+        position: relative;
+        top: 7px;
+        right: 10px;
+    }
+
+    /*信息（在js中会随着点击第二部分而改变）*/
+    #third {
+        position: relative;
+        /* left: -50px; */
+        background: #F8F5F5;
+
+        
+    }
+    .message1 {
+            width: 340px;
+            text-align: right;
+            font-family: Inter;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 78px;
+            letter-spacing: 0.18em;
+            margin: 0 auto;
+        }
+    .pic {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    textarea {
+        resize: none;
+        overflow: auto;
+
+    }
+</style>
+
+<body>
+    <section>
+        <div class="first">
+            <div class="left">
+                <div class="tubiao">
+                    <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/Component%202.png">
+                </div>
+                <div class="yun">云顶书院</div>
+            </div>
+            <div class="right">
+                <div class="people">
+                    <a href="学生信息界面.html"><img
+                            src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_zuojiantou2-17%202.png"></a>
+
+                </div>
+            </div>
+        </div>
+        <div id="sec">
+            <div class="second">
+                <a href="基本信息.html">
+                    <div class="group" style="background: white;border: 2px solid #D9D9D9">
+                        <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/Rectangle%2028.png">基本信息
+                    </div>
+                    <a href="修改信息.html">
+                        <div class="group">
+                            <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_bianji1%201.png">修改信息
+                        </div>
+                    </a>
+                    <a href="修改密码.html">
+                        <div class="group">
+                            <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_bianji1%201.png">修改密码
+                        </div>
+                    </a>
+            </div>
+            <hr style="color: #CCC6C6;">
+        </div>
+        <div id="third">
+            <!-- <div class="pic"><input type="file" class="pic1"></div> -->
+            <div class="message1">
+                <tr>
+                    <td>学号/账号:</td>
+                    <td><input type="text" class="student_id" value=`${data.student_id}`></td><br>
+                </tr>
+                <tr>
+                    <td>密码:</td>
+                    <td><input type="text" class="student_password"></td><br>
+                </tr>
+                <tr>
+                    <td>姓名:</td>
+                    <td><input type="text" class="student_name"></td><br>
+                </tr>
+                <tr>
+                    <td>性别:</td>
+                    <td><input type="text" class="student_gender"></td><br>
+                </tr>
+                <tr>
+                    <td>学院和班级:</td>
+                    <td><input type="text" class="student_class"></td><br>
+                </tr>
+                <tr>
+                    <td>期数:</td>
+                    <td><input type="text" class="periods"></td><br>
+                </tr>
+                <tr>
+                    <td>方向:</td>
+                    <td><input type="text" class="direction"></td><br>
+                </tr>
+                <tr>
+                    <td>获奖经历:</td>
+                    <td><textarea name="" id="" cols="22" rows="3" class="awards"></textarea></td>
+                </tr>
+            </div>
+            </div>
+    </section>
+</body>
+<script src="基本信息.js"></script>
+<script  src="修改信息.js"></script>
+</html>

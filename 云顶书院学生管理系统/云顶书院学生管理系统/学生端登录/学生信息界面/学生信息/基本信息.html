@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本信息</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+    section {
+        background: #F8F5F5;
+    }
+    /* 顶部蓝条 */
+    .first {
+        display: flex;
+        /* width: 1640px; */
+        height: 80px;
+        background: #3C7B9E;
+        justify-content: space-between;
+    }
+    /*蓝条左边*/
+    .left {
+        display: flex;
+        flex-direction: row;
+        /* width: 1280px; */
+        height: 80px;
+        position: relative;
+        top: 12px;
+        left: 25px;
+        /* justify-content: space-around; */
+    }
+    .yun {
+        position: relative;
+        font-family: Inter;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 42px;
+        letter-spacing: 0.09em;
+        text-align: left;
+        color:#FFFFFF;
+        left: 20px;
+        top: 5px;
+    }
+    /*蓝条右边*/
+    .right {
+        position: relative;
+        right: 50px;
+        top: 13px;
+    }
+    /*四个选择*/
+    #sec {
+        /* width: 1400px; */
+        width: 80%;
+        background: #F8F5F5;
+        margin: auto;
+    }
+
+    .second {
+        display: flex;
+        height: 100px;
+        background: #F8F5F5;
+    }
+
+    .second div {
+        width: 180px;
+        height: 53px;
+        font-family: Inter;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 53px;
+        letter-spacing: 0.18em;
+        color: #3f3c3c4d;
+        border: 1px solid #D9D9D9;
+        text-align: center;
+        position: relative;
+        top: 46px;
+        left: 10%;
+        background: #F4F0F0;
+    }
+
+    .second img {
+        position: relative;
+        top: 7px;
+        right: 10px;
+    }
+    
+    /*信息（在js中会随着点击第二部分而改变）*/
+    #third {
+        display: flex;
+        position: relative;
+        top: 80px;
+        height: 600px;
+        /* left: -50px; */
+        background: #F8F5F5;
+        justify-content: space-around;
+    }
+    .pic{
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+    }
+    .massage1{
+        position: relative;
+        width: 330px;
+        /* background: #ccc; */
+        text-align: right;
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 70px;
+        letter-spacing: 0.18em;
+        left: -300px;
+    }
+    a {text-decoration: none;}
+</style>
+<body>
+    <section>
+        <div class="first">
+            <div class="left">
+                <div class="tubiao">
+                    <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/Component%202.png">
+                </div>
+                <div class="yun">云顶书院</div>
+            </div>
+            <div class="right">
+                <div class="people">
+                    <a href="学生信息界面.html"><img
+                            src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_zuojiantou2-17%202.png"></a>
+        
+                </div>
+            </div>
+        </div>
+        <div id="sec">
+            <div class="second">
+                <a href="基本信息.html">
+                    <div class="group" style="background: white;border: 2px solid #D9D9D9" onclick="group()">
+                        <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/Rectangle%2028.png">基本信息
+                    </div>
+                <!-- </a>
+                <a href="详细信息.html">
+                    <div class="group" onclick="group()">
+                        <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_caidan2%201.png">详细信息
+                    </div>
+                </a> -->
+                <a href="修改信息.html">
+                    <div class="group" onclick="group()">
+                        <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_bianji1%201.png">修改信息
+                    </div>
+                </a>
+                <a href="修改密码.html">
+                    <div class="group" onclick="group()">
+                        <img src="https://ycpp-jn.oss-cn-beijing.aliyuncs.com/img/xianxing-_bianji1%201.png">修改密码
+                    </div>
+                </a>
+            </div>
+            <hr style="color: #CCC6C6;">
+        </div>
+        <div id="third">
+            <!-- <div class="pic"><input type="file" class="pic1"></div> -->
+            <div class="massage1">
+                学号/账号:<input type="text"><br>
+                密码:<input type="text"><br>
+                姓名:<input type="text"><br>
+                性别:<input type="text"><br>
+                学院和班级:<input type="text"><br>
+                期数:<input type="text"><br>
+                方向:<input type="text"><br>
+                获奖经历:<input type="text"><br>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    
+        var groups = document.getElementsByClassName('group');
+        var third = document.getElementById('third');
+        var fourth = document.getElementById('fourth');
+        console.log(groups.length);
+        function group() {
+            for (var i = 0; i < groups.length; i++) {
+                console.log('111')
+                groups[i].onclick = function () {
+                    for (var j = 0; j < groups.length; j++) {
+                        groups[j].style.background = '#F4F0F0';
+                        groups[j].style.border = '1px solid #D9D9D9';
+                    }
+                    this.style.background = 'white';
+                    this.style.border = '2px solid #D9D9D9'
+                    console.log('222');
+                    third.style.display = 'none';
+                    console.log(i);
+                }
+
+            }
+
+        }
+        //请求
+        function users() {
+                let user = new XMLHttpRequest();
+                user.open('get', '');
+                user.send();
+                user.onreadystatechange = function () {
+                    if (user.readyState === 4 && user.status === 200) {
+                        var message = document.getElementById("message");
+                        let check = JSON.parse(user.responseText);
+                        console.log(check);
+                    }
+
+                }
+            }
+
+</script>
+</html>

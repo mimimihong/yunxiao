@@ -1,0 +1,144 @@
+html {
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+.top {
+    width: 100%;
+    height: 11%;
+    background-color: #3c7b9e;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    width: 10%;
+    background-color: transparent;
+    border-width: 0;
+    transition-duration: 0.3S;
+}
+
+.back>img {
+    width: 55%;
+    height: 80%;
+}
+
+.back:hover {
+    transform: scale(0.8);
+}
+
+.logo {
+    width: 26%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoImg {
+    width: 43%;
+    height: 90%;
+}
+
+.logo>a {
+    width: 57%;
+    height: 80%;
+    margin-top: 3%;
+    font-size: 225%;
+    color: #f3ffff;
+    vertical-align: bottom;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 89%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search {
+    width: 30%;
+    height: 100%;
+}
+th{
+    font-size: 30px;
+    padding: 50px;
+}
+.all {
+    height: 100%;
+    border-left: dotted 2px rgb(92, 92, 166);
+}
+span{
+    margin: 0;
+    padding: 0;
+}
+#search {
+    border-radius: 45px;
+    width: 100%;
+    border-color: rgb(25, 48, 92);
+    text-align: center;
+    color: cornflowerblue;
+    height: 40px;
+}
+input[type="search"]{
+    /*修改输入框里字体大小*/
+    font-size: 25px;
+}
+.search p {
+    text-align: center;
+    margin-top: 50%;
+    color: rgb(12, 34, 76);
+    font-size: 35px;
+}
+
+#submit {
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 6%;
+    border-radius: 45px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 100%;
+    height: 3%;
+    transition-duration: 0.3S;
+}
+
+#submit:hover {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+li {
+    font-size: 150%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.all button {
+    background-color: #3c7b9e;
+    color: whitesmoke;
+    border-radius: 45px;
+    border-width: 0;
+    font-size: 20px;
+    transition-duration: 0.3S;
+}
+
+.all button:hover {
+    transform: scale(0.8);
+    cursor: pointer;
+}
