@@ -1,9 +1,9 @@
 document.querySelector('.admin_login').addEventListener('click', function () {
-    let inputEmail = document.querySelector('.student_id input').value;
-    let inputPassword = document.querySelector('.student_password input').value;
-
+    let inputEmail = document.querySelector('.student_id input');
+    let inputPassword = document.querySelector('.student_password input');
+    
     // 发送登录请求
-    axios.post("https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/loginPass", {
+    axios.post("http://u55c9e.natappfree.cc/auth-serve/student/loginPass", {
         userName: inputEmail,
         passWord: inputPassword
     })

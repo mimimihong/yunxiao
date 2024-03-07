@@ -6,6 +6,7 @@
     <title>请假</title>
     <link rel="stylesheet" type="text/css" href="请假.css"/>
     <script src="研学.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="box">
@@ -40,17 +41,17 @@
         <div class="box2">
             <div class="t">
                 <div class="h1">
-                    姓名&nbsp;&nbsp;&nbsp;&nbsp;
-                    原研学日期&nbsp;&nbsp;&nbsp;&nbsp;
-                    请假原因&nbsp;&nbsp;&nbsp;&nbsp;
-                    请假时间&nbsp;&nbsp;&nbsp;&nbsp;
-                    抄送&nbsp;&nbsp;&nbsp;&nbsp;
-                    审批
+                    <div>姓名: <input type="text" id="nick_name"></div>
+                    <div>开始时间: <input type="date" id="startTime"></div>
+                    <div>结束时间: <input type="date" id="endTime"></div>
+                    <div>请假原因: <input type="text" id="reason"></div>
+                    <div id="submmit">提交</div>
                 </div>
                 <div id="leave_text">
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    <script src="请假.js"></script>    
 </body>
 </html>

@@ -218,6 +218,25 @@ html {
     height: 80px;
     margin-left: 70px;
 }
+.h1>div{
+    margin-top:20px ;
+}
+.h1>div>input{
+    height: 100%;
+    font-size: 35px;
+}
+#submmit{
+    background-color: #3C7B9E;
+    color: whitesmoke;
+    width: 20%;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 45px;
+    transition-duration: 0.3s;
+}
+#submmit:hover{
+    transform: scale(0.8);
+}
 .leave_text {
     float: left;
     border: solid #0000004D 1px;
