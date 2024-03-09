@@ -3,7 +3,7 @@ var back = document.getElementsByClassName("back");
             location.href = "../学生信息界面.html";
         }
         // 从后端获取数据并在页面上显示
-	axios.get("http://prjs7y.natappfree.cc/auth-serve/publish/add")
+axios.get("http://jmyj75.natappfree.cc/auth-serve/publish/st")
 		.then(response => {
 			console.log(response);
 			var content = response.data.content;

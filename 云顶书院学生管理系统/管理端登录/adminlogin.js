@@ -5,7 +5,7 @@ document.querySelector('.admin_login').addEventListener('click', function () {
 
     // 发送登录请求
     axios({
-        url: "http://wrgk8g.natappfree.cc/auth-serve/student/loginPass",
+        url: "http://jmyj75.natappfree.cc/loginPass",
         method: 'post',
         data: {
             userName: inputEmail,

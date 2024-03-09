@@ -4,7 +4,7 @@ submmit.onclick = function () {
     var startTime = document.getElementById("startTime").value;
     var endTime = document.getElementById("endTime").value;
     var reason = document.getElementById("reason").value;
-    const res = axios.post('http://wrgk8g.natappfree.cc/auth-serve/leave/createLeaveRequest', {
+    const res = axios.post('http://jmyj75.natappfree.cc/auth-serve/leave/createLeaveRequest', {
         "nickName": nick_name,
         "startTime": startTime,
         "endTime": endTime,

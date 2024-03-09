@@ -3,7 +3,7 @@ document.querySelector('.student_login').addEventListener('click', function () {
     let inputPassword = document.querySelector('.student_password input').value;
 
     // 发送登录请求
-    axios.post("/loginPass", {
+    axios.post("http://jmyj75.natappfree.cc/auth-serve/loginPass", {
         userName: inputEmail,
         passWord: inputPassword
     })

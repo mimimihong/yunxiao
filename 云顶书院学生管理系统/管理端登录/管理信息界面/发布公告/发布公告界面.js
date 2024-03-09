@@ -13,11 +13,10 @@ submitContent.onclick = function() {
 
     // 发送数据到后端
     axios({
-        url: 'http://wrgk8g.natappfree.cc/auth-serve/publish/add',
-
+        url: 'http://jmyj75.natappfree.cc/auth-serve/publish/add',
             method: 'post',
-            data:{
-                content
+        data: {
+                content: content,
     }
         }).then((result) => {
             const data = result.data;

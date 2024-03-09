@@ -1,7 +1,7 @@
 data = [
 ]
 
-const res = axios.get("http://wrgk8g.natappfree.cc/auth-serve/student/queryList")
+const res = axios.get("http://jmyj75.natappfree.cc/auth-serve/student/queryList")
     .then(function (response) {
         data = response.data;
 
