@@ -1,4 +1,5 @@
 document.querySelector('.admin_login').addEventListener('click', function () {
+
     let inputEmail = document.querySelector('.iinput').value;
     let inputPassword = document.querySelector('.pinput').value;
 
@@ -13,6 +14,7 @@ document.querySelector('.admin_login').addEventListener('click', function () {
         headers: {
             'Content-Type': 'application/json',
             // 'Access-Control-Allow-Origin': '*'
+
         }
     })
         .then(function (response) {

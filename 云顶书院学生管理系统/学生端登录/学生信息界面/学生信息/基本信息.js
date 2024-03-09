@@ -1,4 +1,4 @@
-
+console.log(localStorage.getItem("stuid"));
 var groups = document.getElementsByClassName('group');
 var third = document.getElementById('third');
 var fourth = document.getElementById('fourth');
@@ -40,11 +40,7 @@ const message = document.querySelector('.message1')*/
 axios({
     url: '/queryNo',
     method: 'get',
-    params:{
-    id: document.querySelector('.student_id').value
-}
-}).then((response) =>{
-    console.dir(response)
+
     const data = response.data;
     console.log(data);
     if (data.code === 200) {
@@ -54,11 +50,11 @@ axios({
     </tr>
     <tr>
         <td>密码:</td>
-        <td><input type="text" class="student_password" value=${ data.passWord }></td><br>
+        <td><input type="text" class="student_password" value=${data.passWord}></td><br>
     </tr>
     <tr>
         <td>姓名:</td>
-        <td><input type="text" class="student_name" value=${ data.userName }></td><br>
+        <td><input type="text" class="student_name" value=${data.userName}></td><br>
     </tr>
     <tr>
         <td>性别:</td>
@@ -74,11 +70,11 @@ axios({
     </tr>
     <tr>
         <td>方向:</td>
-        <td><input type="text" class="direction" value=${ data.direction }></td><br>
+        <td><input type="text" class="direction" value=${data.direction}></td><br>
     </tr>
     <tr>
         <td>获奖经历:</td>
-        <td><textarea name="" id="" cols="22" rows="3" class="awards" value=${ data.awardInfo }
+        <td><textarea name="" id="" cols="22" rows="3" class="awards" value=${data.awardInfo}
         ></textarea></td>
     </tr>`
         /*document.querySelector('.student_id').innerHTML = data.studentNo
