@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>请假</title>
+    <link rel="stylesheet" type="text/css" href="请假.css" />
+    <script src="研学.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="box">
+      <div class="yunding">
+        <img
+          class="logo"
+          src="https://06ddd.oss-cn-beijing.aliyuncs.com/202402201025435.png"
+        />
+        <div class="text1">云顶书院</div>
+        <input
+          id="return"
+          type="image"
+          onclick="gofirstpage();"
+          src="https://06ddd.oss-cn-beijing.aliyuncs.com/202402201050160.png"
+        />
+      </div>
+      <div class="line"></div>
+      <div class="box1">
+        <div id="time" onclick="gotime();">
+          <img
+            class="time_image"
+            src="https://06ddd.oss-cn-beijing.aliyuncs.com/202402201520410.png"
+          />
+          <div class="text2">研学时间</div>
+        </div>
+        <div id="leave" onclick="goleave();">
+          <img
+            class="leave_image"
+            src="https://06ddd.oss-cn-beijing.aliyuncs.com/202402201520055.png"
+          />
+          <div class="text4">请假</div>
+        </div>
+      </div>
+      <div class="box2">
+        <div class="t">
+          <div class="h1">
+            <div>姓名: <input type="text" id="nick_name" /></div>
+            <div>开始时间: <input type="date" id="startTime" /></div>
+            <div>结束时间: <input type="date" id="endTime" /></div>
+            <div>请假原因: <input type="text" id="reason" /></div>
+            <div id="submmit">提交</div>
+          </div>
+          <div id="leave_text"></div>
+        </div>
+      </div>
+    </div>
+    <script src="请假.js"></script>
+  </body>
+</html>
