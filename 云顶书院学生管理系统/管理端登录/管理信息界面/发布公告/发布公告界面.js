@@ -9,12 +9,12 @@ back[0].onclick = function () {
 submitContent =document.getElementById("submitContent")
 submitContent.onclick = function() {
     // 获取文本框内容
-    var title = document.querySelector(".title").value;
     var content = document.getElementById("content").value;
 
     // 发送数据到后端
     axios({
         url: 'http://wrgk8g.natappfree.cc/auth-serve/publish/add',
+
             method: 'post',
             data:{
                 content
@@ -29,3 +29,4 @@ submitContent.onclick = function() {
 
     })
 }
+

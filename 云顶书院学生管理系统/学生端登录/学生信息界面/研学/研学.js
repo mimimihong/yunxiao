@@ -37,7 +37,7 @@ function show_change() {
     }
 // var img = document.getElementById("img");
 // img.src = data;
-}
+
 function show_leave() {
     const xha=new XMLHttpRequest();
     xha.open("GET","  ");    //将请假展示

@@ -72,7 +72,7 @@ for (i = 0; i < data.length; i++) {
     var detail = document.createElement("button");
     detail.id = i;
     div.appendChild(detail);
-    detail.innerHTML = "详细信息";
+    detail.innerHTML = "注销";
     detail.onclick = function () {
         location.href = "../../../学生端登录/学生信息界面/学生信息/基本信息.html";//之后换成学生信息页面..
         localStorage.setItem("stuid", data[detail.id].studentNo);

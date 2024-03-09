@@ -34,4 +34,12 @@ function show_note() {
         }
     }
 }
-//删除无法实现   
+//删除无法实现  
+document.querySelector('.button').addEventListener('click', () => {                     /*注销*/
+    axios({
+        url: `/auth-serve/student/queryNo?id=${id}`,
+        method: 'delete'
+    }).then((result) => {
+        alert("删除成功请刷新查看")
+    }).catch((error) => { console.log("error") })
+}) 
