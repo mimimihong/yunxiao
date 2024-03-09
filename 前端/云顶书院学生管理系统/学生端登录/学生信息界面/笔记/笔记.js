@@ -1,3 +1,4 @@
+
 var retn = document.getElementById('return');
 function gofirstpage() {
     window.location.href="../学生信息界面.html";
@@ -10,28 +11,32 @@ var person = document.getElementsByClassName('person');
 function goperson() {
     window.location.href="个人笔记.html";
 }
-function enter_note(){
-    var area = document.getElementById("area").value;
-    const xhr=new XMLHttpRequest();
-    xhr.open("POST","   ");    //文本框中的内容输入后台
-    xhr.setRequestHeader("Content-type", "application/json");
-    xhr.send(JSON.stringify({
-       note: area,
-    }));
-}
-function show_note() {
-    const xha=new XMLHttpRequest();
-    xha.open("GET","  ");    //将添加的笔记展示到个人笔记
-    xha.send();
-    xha.onreadystatechange=function(){
-        if(xha.readyState==XMLHttpRequest.DONE&&xha.status==200){
-            textfive=JSON.parse(xha.responseText);
-            for(let i=0;i<textfive.data.length;i++){
-                document.getElementsByClassName("textfive").innerHTML += textfive.data[i] + "<br>";
-                var delete_new = document.getElementById("delete_new");
-                delete_new.hidden = false; //删除键目前只有一个，页面也只能放一篇笔记
-            }
-        }
-    }
-}
-//删除无法实现   
+let data;
+var area = document.getElementById("area").value;
+// 获取文本框内容
+// 发送数据到后端
+function s() {
+    const res = axios.post(' http://jmyj75.natappfree.cc/auth-serve/publish/add', {
+        "content": area,
+    }).then(function (response) {
+        console.dir(response);
+        alert("发布成功");
+    })
+} 
+    // 在这里处理数据并展示到页面上     
+//     const response = axios.get(' http://jmyj75.natappfree.cc/auth-serve/publish/add');   
+//     if (response.status === 200) {         // 获取数据并展示到页面上  
+//     const textfive = document.getElementsByClassName('textfive');  
+//     textfive.innerHTML = response.data;   
+//     } else {  
+//          console.error('Error fetching data:', response.status);  
+// }  
+    
+    // const response = axios.get(' http://jmyj75.natappfree.cc/auth-serve/publish/add')
+    //     .then(function (response) {
+    //         console.log(response);
+    //         if (response.status === 200) {         // 获取数据并展示到页面上  
+    //             document.getElementsByClassName('textfive') = response;
+    //         }
+    //     })
+    

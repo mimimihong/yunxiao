@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加笔记</title>
+    <link rel="stylesheet" type="text/css" href="添加笔记.css"/>
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.5.0/axios.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="yunding">  
+            <img class="logo" src="https://06ddd.oss-cn-beijing.aliyuncs.com/202402201025435.png"/>
+            <div class="text1">云顶书院</div>
+            <input id="return" type="image" onclick="gofirstpage();" src="https://06ddd.oss-cn-beijing.aliyuncs.com/202402201050160.png"/>
+        </div>
+        <div class="line"></div> 
+        <div class="box1">   
+            <div class="add" onclick="goadd();">
+                <img class="add_image" src="https://06ddd.oss-cn-beijing.aliyuncs.com/202402231758072.png"/>
+                <div class="text2">添加笔记</div>
+            </div>
+            <div class="person" onclick="goperson();">
+                <img class="person_image" src="https://06ddd.oss-cn-beijing.aliyuncs.com/202402221031479.png"/>
+                <div class="text3">个人笔记</div>
+            </div>
+        </div>
+        <div class="box2">
+            <textarea id="area" rows="100" cols="300"></textarea>
+            <input type="submit" value="完&nbsp;&nbsp;&nbsp;成" id="finish" onclick="s();"/>
+        </div>
+    </div>
+    <script src="笔记.js"></script>
+</body>
+</html>    
