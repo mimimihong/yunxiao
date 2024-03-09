@@ -36,13 +36,11 @@ const periods = document.querySelector('.periods')
 const direction = document.querySelector('.direction')
 const awards = document.querySelector('.awards')
 const message = document.querySelector('.message1')*/
+
 axios({
-    url: 'https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/addStudent',
+    url: '/queryNo',
     method: 'get',
-    params: {
-        id: document.querySelector('.student_id').value
-    }
-}).then((response) => {
+
     const data = response.data;
     console.log(data);
     if (data.code === 200) {
@@ -94,5 +92,4 @@ axios({
     .catch(function (error) {
         // 处理登录失败的逻辑，比如网络错误等
         console.error(error);
-        alert("获取失败，请稍后重试！");
     });

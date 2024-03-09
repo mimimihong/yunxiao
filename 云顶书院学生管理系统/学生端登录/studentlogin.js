@@ -3,7 +3,7 @@ document.querySelector('.student_login').addEventListener('click', function () {
     let inputPassword = document.querySelector('.student_password input').value;
 
     // 发送登录请求
-    axios.post("https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/loginPass", {
+    axios.post("/loginPass", {
         userName: inputEmail,
         passWord: inputPassword
     })

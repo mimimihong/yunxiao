@@ -21,7 +21,7 @@ back[0].onclick = function () {
        document.querySelector('.student_quit').addEventListener('click', () => {
     const input = document.querySelector('.input').value;
     axios({
-      url: 'https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/addStudent',
+      url: 'http://prjs7y.natappfree.cc/auth-serve/student/addStudent',
           method: 'post',
           data: {
         student: input                         /*是学生名字还是学号*/
