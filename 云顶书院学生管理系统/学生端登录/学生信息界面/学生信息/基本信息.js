@@ -1,4 +1,4 @@
-
+console.log(localStorage.getItem("stuid"));
 var groups = document.getElementsByClassName('group');
 var third = document.getElementById('third');
 var fourth = document.getElementById('fourth');
@@ -24,7 +24,7 @@ function group() {
 
 var back = document.getElementsByClassName("back");
 back[0].onclick = function () {
-  location.href = "../学生信息界面.html";
+    location.href = "../学生信息界面.html";
 }
 
 /*const student_id = document.querySelector('.student')
@@ -39,10 +39,10 @@ const message = document.querySelector('.message1')*/
 axios({
     url: 'https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/addStudent',
     method: 'get',
-    params:{
-    id: document.querySelector('.student_id').value
-}
-}).then((response) =>{
+    params: {
+        id: document.querySelector('.student_id').value
+    }
+}).then((response) => {
     const data = response.data;
     console.log(data);
     if (data.code === 200) {
@@ -52,31 +52,31 @@ axios({
     </tr>
     <tr>
         <td>密码:</td>
-        <td><input type="text" class="student_password" value=${ data.passWord }></td><br>
+        <td><input type="text" class="student_password" value=${data.passWord}></td><br>
     </tr>
     <tr>
         <td>姓名:</td>
-        <td><input type="text" class="student_name" value=${ data.userName }></td><br>
+        <td><input type="text" class="student_name" value=${data.userName}></td><br>
     </tr>
     <tr>
         <td>性别:</td>
-        <td><input type="text" class="student_gender" value=${ data.sex }></td><br>
+        <td><input type="text" class="student_gender" value=${data.sex}></td><br>
     </tr>
     <tr>
         <td>学院和班级:</td>
-        <td><input type="text" class="student_class" value=${ data.duringTime }></td><br>
+        <td><input type="text" class="student_class" value=${data.duringTime}></td><br>
     </tr>
     <tr>
         <td>期数:</td>
-        <td><input type="text" class="periods" value=${ data.duringTime }></td><br>
+        <td><input type="text" class="periods" value=${data.duringTime}></td><br>
     </tr>
     <tr>
         <td>方向:</td>
-        <td><input type="text" class="direction" value=${ data.direction }></td><br>
+        <td><input type="text" class="direction" value=${data.direction}></td><br>
     </tr>
     <tr>
         <td>获奖经历:</td>
-        <td><textarea name="" id="" cols="22" rows="3" class="awards" value=${ data.awardInfo }
+        <td><textarea name="" id="" cols="22" rows="3" class="awards" value=${data.awardInfo}
         ></textarea></td>
     </tr>`
         /*document.querySelector('.student_id').innerHTML = data.studentNo
