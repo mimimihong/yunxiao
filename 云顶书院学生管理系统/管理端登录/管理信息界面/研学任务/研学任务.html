@@ -109,6 +109,7 @@
         <textarea name="content" id="content" cols="132" rows="30"></textarea>
     </div><br>
     <div class="font" onclick="submitContent">发布</div>
+    <script src="../../../url.js"></script>
 </body>
 <script>
     var back = document.getElementsByClassName("back");
@@ -119,16 +120,17 @@ back[0].onclick = function () {
 function submitContent() {
     // 获取文本框内容
     var content = document.getElementById("content").value;
-
+console.log(content);
     // 发送数据到后端
     axios({
-        url: 'https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/add',
+        url: '/add',
             method: 'post',
             data:{
                 content
     }
-        }).then((result) => {
+        }).then(result => {
             const data = result.data;
+            console.log(data);
             if (data.code === 200) {
                 alert('发布成功');
               } else {

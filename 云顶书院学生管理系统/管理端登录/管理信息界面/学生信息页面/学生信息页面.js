@@ -14,7 +14,7 @@ for (i = 0; i < data.length; i++) {
     div.appendChild(text);
     var detail = document.createElement("button");
     div.appendChild(detail);
-    detail.innerHTML = "详细信息";
+    detail.innerHTML = "注销";
     detail.onclick = function () {
         location.href = "../../../学生端登录/学生信息界面/学生信息/基本信息.html";//之后换成学生信息页面..
     }
@@ -37,9 +37,15 @@ submmit.onclick = function () {
             div.appendChild(text);
             var detail = document.createElement("button");
             div.appendChild(detail);
-            detail.innerHTML = "详细信息";
-            detail.onclick = function () {
-                location.href = "../../../学生端登录/学生信息界面/学生信息/基本信息.html";
+            detail.innerHTML = "注销";
+            detail.onclick = function () {                   /*注销*/
+                    axios({
+                        url: `https://865b-240e-425-9c40-e58-7dba-efea-1840-680e.ngrok-free.app/auth-serve/student/queryNo?id=${id}`,
+                        method: 'delete'
+                    }).then((result) => {
+                        alert("删除成功请刷新查看")
+                    }).catch((error) => { console.log("error") })
+                }
 
             }
             text.innerHTML = "姓名:" + data[i].name + "&nbsp&nbsp&nbsp&nbsp学号:" + data[i].stuId + "&nbsp&nbsp&nbsp&nbsp方向:" + data[i].direction + "&nbsp&nbsp&nbsp&nbsp期数:" + data[i].period;

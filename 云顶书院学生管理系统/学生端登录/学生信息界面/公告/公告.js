@@ -3,13 +3,14 @@ var back = document.getElementsByClassName("back");
             location.href = "../学生信息界面.html";
         }
         // 从后端获取数据并在页面上显示
-	axios.get("https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/st")
+	axios.get("http://prjs7y.natappfree.cc/auth-serve/publish/add")
 		.then(response => {
+			console.log(response);
 			var content = response.data.content;
+			console.log(content);
 			if(response.data.content){
 				document.getElementById("content").innerText = content;
 			}else{
 				document.getElementById("content").innerText = "暂无公告";
 			}
-		})
-		.catch(error => console.log('获取失败'));
+		}).catch(error => console.log('获取失败'));

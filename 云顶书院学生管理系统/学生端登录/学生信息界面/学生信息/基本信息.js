@@ -24,7 +24,7 @@ function group() {
 
 var back = document.getElementsByClassName("back");
 back[0].onclick = function () {
-  location.href = "../学生信息界面.html";
+    location.href = "../学生信息界面.html";
 }
 
 /*const student_id = document.querySelector('.student')
@@ -36,13 +36,15 @@ const periods = document.querySelector('.periods')
 const direction = document.querySelector('.direction')
 const awards = document.querySelector('.awards')
 const message = document.querySelector('.message1')*/
+
 axios({
-    url: 'https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/addStudent',
+    url: '/queryNo',
     method: 'get',
     params:{
     id: document.querySelector('.student_id').value
 }
 }).then((response) =>{
+    console.dir(response)
     const data = response.data;
     console.log(data);
     if (data.code === 200) {
@@ -60,15 +62,15 @@ axios({
     </tr>
     <tr>
         <td>性别:</td>
-        <td><input type="text" class="student_gender" value=${ data.sex }></td><br>
+        <td><input type="text" class="student_gender" value=${data.sex}></td><br>
     </tr>
     <tr>
         <td>学院和班级:</td>
-        <td><input type="text" class="student_class" value=${ data.duringTime }></td><br>
+        <td><input type="text" class="student_class" value=${data.duringTime}></td><br>
     </tr>
     <tr>
         <td>期数:</td>
-        <td><input type="text" class="periods" value=${ data.duringTime }></td><br>
+        <td><input type="text" class="periods" value=${data.duringTime}></td><br>
     </tr>
     <tr>
         <td>方向:</td>
@@ -94,5 +96,4 @@ axios({
     .catch(function (error) {
         // 处理登录失败的逻辑，比如网络错误等
         console.error(error);
-        alert("获取失败，请稍后重试！");
     });

@@ -61,10 +61,10 @@ axios({                                                                         
 )
 
 axios({
-    url: 'https://577b-211-93-248-152.ngrok-free.app/auth-serve/student/st',
+    url: 'https://577b-211-93-248-152.ngrok-free.appx/auth-serve/student/st',
     method: 'get',
 }).then((result) => {
-    document.querySelector('.eimg').innerHTML = result.data
+    document.querySelector('img').setAttribute('src', result.data);
 }).catch(() => { alert('404 NOT FOUNT') })
 
 /////////////////////////////////////
